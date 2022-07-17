@@ -27,7 +27,7 @@ function Main(){
                  </div>
             </div>
             }
-            <div>
+            <div className="h-[calc(100vh-50px)]">
                 {openTab==1 && <Dashboard/> }
                 {openTab==2 && <Stock/>}
                 {openTab==3 && <Usage/>}
