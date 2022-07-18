@@ -46,7 +46,7 @@ function Main(){
 
     return(
         <div className="bg-[#eef5f9] h-screen w-screen">
-      <Box bg={useColorModeValue('#2d62ec', '#2d62ec')} px={4}>
+      <Box bg={useColorModeValue('#2d62ec', '#2d62ec')} px={4} height="50px">
         <Flex h={12} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             backgroundColor={'#2d62ec'}
@@ -101,7 +101,7 @@ function Main(){
 
       </Box>
 
-      <Box p={4}>
+      <Box p={4} height='calc(100vh - 50px)'>
                 {openTab==1 && <Dashboard/> }
                 {openTab==2 && <Stock/>}
                 {openTab==3 && <Usage/>}
@@ -117,7 +117,7 @@ function Main(){
     
 
             {isOpen &&
-             <div className="fixed  flex top-0 h-full w-full z-50 ">
+             <div className="fixed  flex top-0  w-full z-50 ">
                  <SideNavbar openTab={openTab} setOpenTab={setOpenTab} setSection={setSection}  onOpen={onOpen} isOpen={isOpen} onClose={onClose}/>
              </div>}
                  {/* <div className="w-3/4 z-50 bg-[#000] opacity-30" onClick={onClose}>

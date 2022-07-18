@@ -47,14 +47,14 @@ function Commandes(){
     ];
     return (
         <div className="h-full w-full flex flex-col items-center justify-center">
-            <div className=" w-2/3 font-bold text-3xl bg-[#fff] rounded flex items-center justify-between">
+            <div className="shadow-xl w-2/3 font-bold text-3xl bg-[#fff] rounded flex items-center justify-between">
                 <div className="flex items-center justify-center">
                 <div className="mr-5 bg-[#2d62ec] text-[#fff] text-5xl p-2 rounded-l"><VscFileSymlinkFile/></div>
                 <h1 >Commande</h1>
                 </div>
                 <div><button className="mx-3 px-3 py-2 rounded text-xl bg-[#2d62ec] text-[#fff]">+ Nouvelle commande</button></div>
             </div>
-            <div className="w-2/3 flex flex-col items-center justify-between bg-[#fff] rounded-xl h-5/6 mt-5">
+            <div className="shadow-xl w-2/3 pb-3  flex flex-col items-center justify-between bg-[#fff] rounded-xl h-5/6 mt-5">
                 <div className="w-full bg-[#2d62ec] text-[#fff] grid grid-cols-6 font-bold text-lg py-3 rounded-t-xl px-5">
                     <div>N commande</div>
                     <div>Date de création</div>

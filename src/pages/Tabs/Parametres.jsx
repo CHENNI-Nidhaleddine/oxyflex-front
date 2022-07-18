@@ -30,13 +30,13 @@ function Parametres(){
     ];
     return (
         <div className="h-full w-full flex flex-col items-center justify-center">
-            <div className=" w-2/3 font-bold text-3xl bg-[#fff] rounded flex items-center justify-between">
+            <div className="shadow-xl w-2/3 font-bold text-3xl bg-[#fff] rounded flex items-center justify-between">
                 <div className="flex items-center justify-center">
                 <div className="mr-5 bg-[#2d62ec] text-[#fff] text-5xl p-2 rounded-l"><AiFillSetting/></div>
                 <h1 >Paramètres</h1>
                 </div>
             </div>
-            <div className="flex flex-col items-center justify-between bg-[#fff] rounded-xl w-1/3 h-1/2 py-5 mt-16 border-t-8 border-[#2d62ec]">
+            <div className="shadow-xl flex flex-col items-center justify-between bg-[#fff] rounded-xl w-1/3 h-fit py-5 mt-16 border-t-8 border-[#2d62ec]">
               <div className="w-full flex items-center justify-between px-10 my-2 text-xl font-bold">
                   <h1>Catégorie de la bouteille</h1>
                   <button className="bg-[#2d62ec] px-2 py-2 text-[#fff] rounded">Ajouter</button>

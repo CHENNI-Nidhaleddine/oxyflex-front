@@ -6,7 +6,8 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-    <div className="App w-screen h-screen "> 
+  
+    <div className="App w-screen h-screen z-30 "> 
       <Layout/>
      </div>
    </BrowserRouter>
