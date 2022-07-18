@@ -44,27 +44,8 @@ function Main(){
     const { isOpen, onOpen, onClose } = useDisclosure()
     const Links = ['Dashboard', 'Projects', 'Team'];
 
-const NavLink = ({ children }: { children: ReactNode }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    _hover={{
-      textDecoration: 'none',
-      bg: useColorModeValue('gray.200', 'gray.700'),
-    }}
-    href={'#'}>
-    {children}
-  </Link>
-);
-
     return(
         <div className="bg-[#eef5f9] h-screen w-screen">
-            {/* <TopNavbar onOpen={onOpen} isOpen={isOpen} onClose={onClose}/> */}
-          
-
-
-    
       <Box bg={useColorModeValue('#2d62ec', '#2d62ec')} px={4}>
         <Flex h={12} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
@@ -112,29 +93,16 @@ const NavLink = ({ children }: { children: ReactNode }) => (
                 />
               </HStack>
               </MenuButton>
-              {/* <MenuList>
-                <MenuItem>Link 1</MenuItem>
-                <MenuItem>Link 2</MenuItem>
-                <MenuDivider />
-                <MenuItem>Link 3</MenuItem>
-              </MenuList> */}
+           
             </Menu>
           </Flex>
         </Flex>
 
-        {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-            </Stack>
-          </Box>
-        ) : null}
+
       </Box>
 
       <Box p={4}>
-      {openTab==1 && <Dashboard/> }
+                {openTab==1 && <Dashboard/> }
                 {openTab==2 && <Stock/>}
                 {openTab==3 && <Usage/>}
                 {openTab==4 && <Notifications/>}
