@@ -1,5 +1,5 @@
 function Notifications(){
-    return (
+    return(
         <div>
             Notifications
         </div>

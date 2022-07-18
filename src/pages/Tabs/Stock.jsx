@@ -4,7 +4,7 @@ import SuiviService from "../../components/SuiviService";
 function Stock(){
     const data=[
         {
-            service:"service1",
+            service:"nidhal",
             reference:"B922/333",
             quantite:"30 B",
             capacite:"50L",
