@@ -47,7 +47,7 @@ function Main(){
     const Links = ['Dashboard', 'Projects', 'Team'];
 
     return(
-        <div className="bg-[#eef5f9] h-screen w-screen ">
+        <div className="bg-[#eef5f9] lg:h-screen h-full w-screen ">
       <Box bg={useColorModeValue('#2d62ec', '#2d62ec')} px={4} height="50px">
        <div className="relative z-30">
         <Flex h={12} alignItems={'center'} justifyContent={'space-between'}>
@@ -109,7 +109,8 @@ function Main(){
   top:0,
   opacity: '70%'
 }} />
-      <Box p={4} height='calc(100vh - 50px)'>
+<div className="h-full lg:h-[calc(100vh-50px)]">
+      <Box p={4} height='100%'>
  <div className="relative z-30 h-full">
                 {openTab==1 && <Dashboard/> }
                 {openTab==2 && <Stock/>}
@@ -124,6 +125,7 @@ function Main(){
                 {openTab==11 && <Apropos/>}
                 </div>
       </Box>
+      </div>
     
 
             {isOpen &&
