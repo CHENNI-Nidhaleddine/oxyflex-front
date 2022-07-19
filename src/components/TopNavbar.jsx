@@ -207,6 +207,7 @@ function TopNavbar({}) {
               aria-haspopup="true"
               onClick={handleProfileMenuOpen}
               color="inherit"
+            
             >
               <AccountCircle />
             </IconButton>
@@ -221,6 +222,7 @@ function TopNavbar({}) {
               color="inherit"
             >
               <MoreIcon />
+
             </IconButton>
           </Box>
         </Toolbar>

@@ -90,16 +90,16 @@ function Stock(){
             <div className="shadow-xl pb-3  w-3/4  flex flex-col items-center justify-between bg-[#fff] rounded-xl h-5/6 mt-5">
                 <div className=" w-full bg-[#2d62ec] text-[#fff] grid grid-cols-5 font-bold text-lg py-3 rounded-t-xl px-5">
                     <div>Service</div>
-                    <div>Référence bouteille </div>
                     <div>Quantité</div>
                     <div>Capacité</div>
                     <div>Reste Quantité</div>
+                    <div></div>
                 </div>
                 <div className="w-full h-full  py-3 self-center overflow-y-scroll ">
                     {
                         data.map((record,index)=>{
                             return (
-                                <SuiviBouteille index={index} service={record.service} reference={record.reference} quantite={record.quantite} capacite={record.capacite} reste={record.reste}/>
+                                <SuiviBouteille index={index} service={record.service}  quantite={record.quantite} capacite={record.capacite} reste={record.reste}/>
                             )
                         })
                     }

@@ -69,7 +69,7 @@ function Main(){
                 cursor={'pointer'}
                 minW={0}>
              <HStack>
-           
+             <div className="relative h-fit w-fit">
              <IconButton
             backgroundColor={'#2d62ec'}
             color={'#fff'}
@@ -79,13 +79,19 @@ function Main(){
             display={{ md: 'block' }}
             onClick={isOpen ? onClose : onOpen}
            
-          />
+          />   
+          <span className="absolute top-0 right-5 rounded-full h-fit w-fit text-sm bg-[#f00] font-bold text-[#fff]  z-50">27</span>
+
+          </div>
+          <div className="relative h-fit w-fit">
                 <Avatar
                   size={'sm'}
                   src={
                     'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
                   }
                 />
+                <span className="absolute top-0 -right-1 rounded-full h-3 w-3 bg-[#0f0] z-50"></span>
+                </div>
               </HStack>
               </MenuButton>
            
