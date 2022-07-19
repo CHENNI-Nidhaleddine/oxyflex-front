@@ -87,7 +87,7 @@ import {
                     
                     </DrawerBody>
           
-                    <DrawerFooter >
+                    <DrawerFooter width={'100%'} marginTop={1} justifyContent="flex-start"  >
                       <Button  variant='outline' mr={3} 
                     //   onClick={onClose}
                       >

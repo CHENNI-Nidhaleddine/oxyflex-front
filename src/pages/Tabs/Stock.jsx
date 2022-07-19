@@ -63,6 +63,21 @@ function Stock(){
             capacite:"50L",
             reste:13,
          },
+         {
+            service:"service5",
+            reference:"B920/333",
+            quantite:"30 B",
+            capacite:"50L",
+            reste:13,
+         },
+         {
+            service:"service5",
+            reference:"B920/333",
+            quantite:"30 B",
+            capacite:"50L",
+            reste:13,
+         },
+         
     ];
     return (
         <div className="h-full w-full flex flex-col items-center justify-center ">

@@ -44,6 +44,38 @@ function Commandes(){
             dateDeCreation:"19/09/2022",
             etat:"Reçue"
          },
+         {
+            numCmd: "000000015",
+            hc: 100,
+            ttc: 22,
+            ajoutePar:"david david",
+            dateDeCreation:"19/09/2022",
+            etat:"Validée"
+         },
+         {
+            numCmd: "000000016",
+            hc: 100,
+            ttc: 22,
+            ajoutePar:"david david",
+            dateDeCreation:"19/09/2022",
+            etat:"Reçue"
+         },
+         {
+            numCmd: "000000015",
+            hc: 100,
+            ttc: 22,
+            ajoutePar:"david david",
+            dateDeCreation:"19/09/2022",
+            etat:"Validée"
+         },
+         {
+            numCmd: "000000016",
+            hc: 100,
+            ttc: 22,
+            ajoutePar:"david david",
+            dateDeCreation:"19/09/2022",
+            etat:"Reçue"
+         },
     ];
     return (
         <div className="h-full w-full flex flex-col items-center justify-center">

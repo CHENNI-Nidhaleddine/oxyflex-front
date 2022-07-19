@@ -27,6 +27,47 @@ function Services(){
             emplacement: "emplacement",
             nombreBouteilles: 12
          },
+         {
+            service: "service4",
+            emplacement: "emplacement",
+            nombreBouteilles: 23
+         },
+         {
+            service: "service5",
+            emplacement: "emplacement",
+            nombreBouteilles: 12
+         },
+         {
+            service: "service4",
+            emplacement: "emplacement",
+            nombreBouteilles: 23
+         },
+         {
+            service: "service5",
+            emplacement: "emplacement",
+            nombreBouteilles: 12
+         },
+         {
+            service: "service4",
+            emplacement: "emplacement",
+            nombreBouteilles: 23
+         },
+         {
+            service: "service5",
+            emplacement: "emplacement",
+            nombreBouteilles: 12
+         },
+         {
+            service: "service4",
+            emplacement: "emplacement",
+            nombreBouteilles: 23
+         },
+         {
+            service: "service5",
+            emplacement: "emplacement",
+            nombreBouteilles: 12
+         },
+         
     ];
     return (
         <div className="h-full w-full flex flex-col items-center justify-center">

@@ -11,6 +11,8 @@ import Apropos from "./Tabs/Apropos";
 import Commandes from "./Tabs/Commandes";
 import Historique from "./Tabs/Historique";
 import Parametres from "./Tabs/Parametres";
+import ParticlesBg from 'particles-bg'
+
 
   import { ReactNode } from 'react';
   import {
@@ -45,8 +47,9 @@ function Main(){
     const Links = ['Dashboard', 'Projects', 'Team'];
 
     return(
-        <div className="bg-[#eef5f9] h-screen w-screen">
+        <div className="bg-[#eef5f9] h-screen w-screen ">
       <Box bg={useColorModeValue('#2d62ec', '#2d62ec')} px={4} height="50px">
+       <div className="relative z-30">
         <Flex h={12} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             backgroundColor={'#2d62ec'}
@@ -66,20 +69,12 @@ function Main(){
                 cursor={'pointer'}
                 minW={0}>
              <HStack>
+           
              <IconButton
             backgroundColor={'#2d62ec'}
             color={'#fff'}
             size={'md'}
-            icon={  <InfoIcon  boxSize={5}/>}
-            aria-label={'Open Menu'}
-            display={{ md: 'block' }}
-            onClick={isOpen ? onClose : onOpen}
-          />
-             <IconButton
-            backgroundColor={'#2d62ec'}
-            color={'#fff'}
-            size={'md'}
-            icon={  <BellIcon  boxSize={5}  marginRight={5}/>}
+            icon={  <BellIcon  boxSize={8}  marginRight={5}/>}
             aria-label={'Open Menu'}
             display={{ md: 'block' }}
             onClick={isOpen ? onClose : onOpen}
@@ -97,11 +92,19 @@ function Main(){
             </Menu>
           </Flex>
         </Flex>
-
+        </div>
 
       </Box>
-
+      <ParticlesBg type="cobweb" color="#2d62ec" bg={{
+  position: "absolute",
+  zIndex: 1,
+  width: '100%',
+  right: 0,
+  top:0,
+  opacity: '70%'
+}} />
       <Box p={4} height='calc(100vh - 50px)'>
+ <div className="relative z-30 h-full">
                 {openTab==1 && <Dashboard/> }
                 {openTab==2 && <Stock/>}
                 {openTab==3 && <Usage/>}
@@ -113,11 +116,12 @@ function Main(){
                 {openTab==9 && <Historique/>}
                 {openTab==10 && <Parametres/>}
                 {openTab==11 && <Apropos/>}
+                </div>
       </Box>
     
 
             {isOpen &&
-             <div className="fixed  flex top-0  w-full z-50 ">
+             <div className="fixed  flex top-0  w-full z-30 ">
                  <SideNavbar openTab={openTab} setOpenTab={setOpenTab} setSection={setSection}  onOpen={onOpen} isOpen={isOpen} onClose={onClose}/>
              </div>}
                  {/* <div className="w-3/4 z-50 bg-[#000] opacity-30" onClick={onClose}>
