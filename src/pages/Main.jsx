@@ -48,8 +48,8 @@ function Main(){
 
     return(
         <div className="bg-[#eef5f9] lg:h-screen h-full w-screen ">
-      <Box bg={useColorModeValue('#2d62ec', '#2d62ec')} px={4} height="50px">
-       <div className="relative z-30">
+      <Box bg={useColorModeValue('#2d62ec', '#2d62ec')} px={4} height="50px" boxShadow='xl'>
+       <div className="relative z-30 ">
         <Flex h={12} alignItems={'center'} justifyContent={'space-between'}>
           <IconButton
             backgroundColor={'#2d62ec'}
@@ -59,6 +59,8 @@ function Main(){
             aria-label={'Open Menu'}
             display={{ md: 'block' }}
             onClick={isOpen ? onClose : onOpen}
+            _hover={{boxShadow:'2xl',backgroundColor:'#2d62ec'}}
+
           />
           <Flex alignItems={'center'}>
             <Menu>
@@ -67,7 +69,8 @@ function Main(){
                 rounded={'full'}
                 variant={'link'}
                 cursor={'pointer'}
-                minW={0}>
+                minW={0}
+                >
              <HStack>
              <div className="relative h-fit w-fit">
              <IconButton
