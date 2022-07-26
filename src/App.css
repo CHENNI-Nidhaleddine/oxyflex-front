@@ -37,3 +37,15 @@
     transform: translateY(0px);
   }
 }
+.cards-container{
+  width:60%;
+  /* background-color:blueviolet; */
+  height:550px;
+  overflow-y:auto;
+ }
+ .alignleft {
+	float: left;
+}
+.alignright {
+	float: right;
+}
