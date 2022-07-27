@@ -128,7 +128,7 @@ function Utilisateurs() {
         </div>
         {isOpen && (
           <div className="fixed  flex top-0  w-full z-30 ">
-            <AjouterUtilisateur onOpen={onOpen} onClose={onClose} isOpen={isOpen} />{" "}
+            <AjouterUtilisateur onOpen={onOpen} onClose={onClose} isOpen={isOpen} />
           </div>
         )}
       </div>
