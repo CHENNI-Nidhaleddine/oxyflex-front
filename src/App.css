@@ -37,15 +37,25 @@
     transform: translateY(0px);
   }
 }
-.cards-container{
-  width:60%;
+.cards-container {
+  width: 60%;
   /* background-color:blueviolet; */
-  height:550px;
-  overflow-y:auto;
- }
- .alignleft {
-	float: left;
+  height: 550px;
+  overflow-y: auto;
 }
-.alignright {
-	float: right;
+.notification-container {
+  width: 100%;
+  height: 100px;
+  margin-bottom:10px;
+  display: flex;
+  flex-wrap : wrap;
+  padding: 10px;
+  /* justify-content: space-between; */
+ 
+}
+.notification-style{
+  background-Color: #EEECF9;
+  border-Radius: 10px;
+  border: 1px solid #EEECF9;
+  margin: 5px;
 }
