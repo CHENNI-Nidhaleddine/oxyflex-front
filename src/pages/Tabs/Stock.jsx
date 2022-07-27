@@ -17,65 +17,83 @@ function Stock(){
         {
             service:"nidhal",
             reference:"B922/333",
-            quantite:"30 B",
+            quantite:30,
             capacite:"50L",
             reste:53,
+            TtBouteilles:[{reference: 'B922/333',reste: 22},{reference: 'B922/334',reste: 73},{reference: 'B202/333',reste: 93}]     
+
         },
         {
             service:"service2",
             reference:"B912/333",
-            quantite:"30 B",
+            quantite:30,
             capacite:"50L",
             reste:33,
+            TtBouteilles:[{reference: 'B922/333',reste: 22},{reference: 'B922/334',reste: 73},{reference: 'B202/333',reste: 93}]     
+
          },
          {
             service:"service3",
             reference:"B932/333",
-            quantite:"90 B",
+            quantite:90,
             capacite:"75L",
             reste:88,
+            TtBouteilles:[{reference: 'B922/333',reste: 22},{reference: 'B922/334',reste: 73},{reference: 'B202/333',reste: 93}]     
+
          },
          {
             service:"service4",
             reference:"B992/333",
-            quantite:"30 B",
+            quantite:30,
             capacite:"25L",
             reste:45,
+            TtBouteilles:[{reference: 'B922/333',reste: 22},{reference: 'B922/334',reste: 73},{reference: 'B202/333',reste: 93}]     
+
          },
          {
             service:"service5",
             reference:"B920/333",
-            quantite:"30 B",
+            quantite:30,
             capacite:"50L",
             reste:13,
+            TtBouteilles:[{reference: 'B922/333',reste: 22},{reference: 'B922/334',reste: 73},{reference: 'B202/333',reste: 93}]     
+
          },
          {
             service:"service4",
             reference:"B992/333",
-            quantite:"30 B",
+            quantite:30,
             capacite:"25L",
             reste:45,
+            TtBouteilles:[{reference: 'B922/333',reste: 22},{reference: 'B922/334',reste: 73},{reference: 'B202/333',reste: 93}]     
+
          },
          {
             service:"service5",
             reference:"B920/333",
-            quantite:"30 B",
+            quantite:30,
             capacite:"50L",
             reste:13,
+            TtBouteilles:[{reference: 'B922/333',reste: 22},{reference: 'B922/334',reste: 73},{reference: 'B202/333',reste: 93}]     
+
          },
          {
             service:"service5",
             reference:"B920/333",
-            quantite:"30 B",
+            quantite:30,
             capacite:"50L",
             reste:13,
+            TtBouteilles:[{reference: 'B922/333',reste: 22},{reference: 'B922/334',reste: 73},{reference: 'B202/333',reste: 93}]     
+
          },
          {
-            service:"service5",
+            service:"Psychologie",
             reference:"B920/333",
-            quantite:"30 B",
+            quantite:30,
             capacite:"50L",
             reste:13,
+            TtBouteilles:[{reference: 'B922/333',reste: 22},{reference: 'B922/334',reste: 73},{reference: 'B202/333',reste: 93}]     
+            
          },
          
     ];
@@ -99,7 +117,7 @@ function Stock(){
                     {
                         data.map((record,index)=>{
                             return (
-                                <SuiviBouteille index={index} service={record.service}  quantite={record.quantite} capacite={record.capacite} reste={record.reste}/>
+                                <SuiviBouteille TtBouteilles={record.TtBouteilles} index={index} service={record.service}  quantite={record.quantite} capacite={record.capacite} reste={record.reste}/>
                             )
                         })
                     }

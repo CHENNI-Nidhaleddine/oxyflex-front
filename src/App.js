@@ -50,7 +50,7 @@ class App extends Component {
           Veuillez passer à l'ordinateur pour une meilleure expérience
           </div>
         </div>
-        <div className="App lg:block hidden w-screen h-screen z-30 "> 
+        <div className="App lg:block hidden w-screen h-screen z-50 "> 
        <Layout/>
     
      </div>

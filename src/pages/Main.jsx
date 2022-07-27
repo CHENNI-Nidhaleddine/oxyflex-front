@@ -31,7 +31,8 @@ import ParticlesBg from 'particles-bg'
     useDisclosure,
     useColorModeValue,
     Stack,
-    Icon
+    Icon,
+    NavLink
   } from '@chakra-ui/react';
 
   import { HamburgerIcon, CloseIcon ,InfoIcon,EmailIcon,BellIcon} from '@chakra-ui/icons';
@@ -47,7 +48,7 @@ function Main(){
     const Links = ['Dashboard', 'Projects', 'Team'];
 
     return(
-        <div className="bg-[#eef5f9] lg:h-screen h-full w-screen ">
+        <div className="bg-[#eef5f9] lg:h-screen h-full w-screen relative z-90 ">
       <Box bg={useColorModeValue('#2d62ec', '#2d62ec')} px={4} height="50px" boxShadow='xl'>
        <div className="relative z-30 ">
         <Flex h={12} alignItems={'center'} justifyContent={'space-between'}>
@@ -86,23 +87,31 @@ function Main(){
           <span className="absolute top-0 right-5 rounded-full h-fit w-fit text-sm bg-[#f00] font-bold text-[#fff]  z-50">27</span>
 
           </div>
-          <div className="relative h-fit w-fit">
+          <div className="relative h-fit w-fit z-90">
                 <Avatar
                   size={'sm'}
                   src={
                     'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
                   }
+                  
                 />
                 <span className="absolute top-0 -right-1 rounded-full h-3 w-3 bg-[#0f0] z-50"></span>
                 </div>
               </HStack>
               </MenuButton>
-           
+              <MenuList>
+                <MenuItem>Profile</MenuItem>
+                <MenuItem>Settings</MenuItem>
+                <MenuDivider />
+                <MenuItem>Logout</MenuItem>
+              </MenuList>
             </Menu>
+
           </Flex>
         </Flex>
+       
         </div>
-
+  
       </Box>
       <ParticlesBg type="cobweb" color="#2d62ec" bg={{
   position: "absolute",
@@ -112,10 +121,10 @@ function Main(){
   top:0,
   opacity: '70%'
 }} />
-<div className="h-full lg:h-[calc(100vh-50px)]">
+<div className="h-full lg:h-[calc(100vh-50px)] ">
       <Box p={4} height='100%'>
- <div className="relative z-30 h-full">
-                {openTab==1 && <Dashboard/> }
+ <div className="relative z-10 h-full">
+                {openTab==1 && <Dashboard setOpenTab={setOpenTab}/> }
                 {openTab==2 && <Stock/>}
                 {openTab==3 && <Usage/>}
                 {openTab==4 && <Notifications/>}

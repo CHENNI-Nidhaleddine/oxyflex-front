@@ -151,8 +151,9 @@ function Utilisateurs() {
         </InputGroup>
       </Stack>
       <div
-        className="cards-container"
-        style={{ display: "flex", flexWrap: "wrap" }}
+        // className="cards-container"
+        // style={{ display: "flex", flexWrap: "wrap" }}
+        className="grid grid-cols-4 w-full overflow-y-scroll h-5/6"
       >
         {dataSearch.map((item, index) => {
           return (

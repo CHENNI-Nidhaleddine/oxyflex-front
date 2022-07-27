@@ -1,5 +1,9 @@
 import {AiFillDelete,AiFillEdit} from "react-icons/ai"
-function SuiviBouteille({index,service,quantite,capacite,reste}){
+import {CgMore} from "react-icons/cg"
+import BouteillesService from "./BouteillesService"
+import {useDisclosure} from '@chakra-ui/react'
+function SuiviBouteille({index,service,quantite,capacite,reste,TtBouteilles}){
+    const { isOpen, onOpen, onClose } = useDisclosure()
     return (
         <div className={`${index%2===0? 'bg-[#fff]':'bg-[#f7faff]'}  border-2 border-[#d8e2eb] grid grid-cols-5  text-lg py-2 rounded-xl mx-2 my-1 pl-3`}>
         <div>{service}</div>
@@ -9,7 +13,12 @@ function SuiviBouteille({index,service,quantite,capacite,reste}){
         <div className="flex items-center justify-center text-3xl text-[#8e9195] ">
             <button className="mr-3 hover:text-[#000]"><AiFillDelete/></button>
             <button className="ml-3 hover:text-[#000]"><AiFillEdit/></button>
+            <button onClick={onOpen} className="ml-3 hover:text-[#000]"><CgMore/></button>
         </div>
+        {isOpen &&
+             <div className="fixed  flex top-0  w-full z-30 ">
+  <BouteillesService onOpen={onOpen} onClose={onClose} isOpen={isOpen} service={service} capacite={capacite} TtBouteilles={TtBouteilles} quantite={quantite}/>             </div>}
+      
         </div>
     )
 }
