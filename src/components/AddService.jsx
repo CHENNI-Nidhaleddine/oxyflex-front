@@ -8,11 +8,12 @@ import {
     DrawerContent,
     DrawerCloseButton,
     Button,Stack,
-    Box,FormLabel,Textarea,Select,Input,InputLeftAddon,InputGroup,InputRightAddon
+    Box,FormLabel,Textarea,Select,Input,InputLeftAddon,InputGroup,InputRightAddon,
+    useDisclosure
 
   } from '@chakra-ui/react'
   import {AddIcon} from "@chakra-ui/icons"
-function AddCommande({isOpen,onOpen,onClose}) {
+function AddService({text}) {
     const Agents=[
         {
           name: 'imed kabouya',
@@ -26,9 +27,11 @@ function AddCommande({isOpen,onOpen,onClose}) {
       ]
     const service = React.useRef()
     const nbBottle=React.useRef()
-  
+    const { isOpen, onOpen, onClose } = useDisclosure()
     return (
       <>
+        <div><button onClick={onOpen} className=" px-2 py-2 rounded text-xl bg-[#2d62ec] text-[#fff]">{text}</button></div>
+
         <Drawer
           isOpen={isOpen}
           placement='right'
@@ -87,4 +90,4 @@ function AddCommande({isOpen,onOpen,onClose}) {
       </>
     )
   }
-  export default AddCommande;
+  export default AddService;

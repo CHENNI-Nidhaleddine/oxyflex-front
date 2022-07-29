@@ -74,16 +74,16 @@ export default function Cards({ index, matricule, nom, service, role, image }) {
             flex={1}
             fontSize={"sm"}
             rounded={"full"}
-            bg={"blue.400"}
+            bg={"#2d62ec"}
             color={"white"}
-            boxShadow={
-              "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
-            }
+            // boxShadow={
+            //   "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
+            // }
             _hover={{
-              bg: "blue.500",
+              bg: "#e2e8f0",
             }}
             _focus={{
-              bg: "blue.500",
+              bg: "#e2e8f0",
             }}
           >
            <SupprimerUtilisateur />

@@ -1,4 +1,6 @@
 import {AiFillSetting} from "react-icons/ai"
+import AddService from "../../components/AddService";
+import ChangePassword from "../../components/ChangePassword";
 import SuiviService from "../../components/SuiviService";
 function Parametres(){
     const data=[
@@ -43,7 +45,7 @@ function Parametres(){
               </div>
               <div className="w-full flex items-center justify-between px-10 my-2 text-xl font-bold">
                   <h1>Service</h1>
-                  <button className="bg-[#2d62ec] px-2 py-2 text-[#fff] rounded">Ajouter</button>
+                  <AddService text="Ajouter"/>
               </div>
               <div className="w-full flex items-center justify-between px-10 my-2 text-xl font-bold">
                   <h1>Role</h1>
@@ -55,7 +57,7 @@ function Parametres(){
               </div>
               <div className="w-full flex items-center justify-between px-10 my-2 text-xl font-bold">
                   <h1>Mot de passe</h1>
-                  <button className="bg-[#2d62ec] px-2 py-2 text-[#fff] rounded">Modifier</button>
+                  <ChangePassword/>
               </div>
                 
             </div>

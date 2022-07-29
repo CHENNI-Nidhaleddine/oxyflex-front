@@ -9,32 +9,15 @@ import {
   AlertDialogOverlay,
   useDisclosure,
 } from "@chakra-ui/react";
-
-function SupprimerUtilisateur() {
+import {AiFillDelete} from "react-icons/ai"
+function DeleteBottle() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const cancelRef = React.useRef();
 
   return (
     <>
-      <Button
-        flex={1}
-        onClick={onOpen}
-        fontSize={"sm"}
-        rounded={"full"}
-        bg={"#2d62ec"}
-        color={"white"}
-        // boxShadow={
-        //   "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
-        // }
-        _hover={{
-          bg: "#e2e8f0",
-        }}
-        _focus={{
-          bg: "#e2e8f0",
-        }}
-      >
-        Supprimer
-      </Button>
+ 
+      <button className="mr-3 hover:text-[#000]" onClick={onOpen} ><AiFillDelete/></button>
 
       <AlertDialog
         isOpen={isOpen}
@@ -44,12 +27,10 @@ function SupprimerUtilisateur() {
         <AlertDialogOverlay>
           <AlertDialogContent>
             <AlertDialogHeader fontSize="lg" fontWeight="bold">
-              Supprimer utilisateur
+              Supprimer Stock
             </AlertDialogHeader>
 
-            <AlertDialogBody
-            //  width="fit-content" margin="auto"
-             >Êtes-vous sûr?</AlertDialogBody>
+            <AlertDialogBody>Êtes-vous sûr?</AlertDialogBody>
 
             <AlertDialogFooter>
               <Button ref={cancelRef} onClick={onClose}>
@@ -66,4 +47,4 @@ function SupprimerUtilisateur() {
   );
 }
 
-export default SupprimerUtilisateur;
+export default DeleteBottle;

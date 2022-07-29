@@ -12,7 +12,7 @@ import Commandes from "./Tabs/Commandes";
 import Historique from "./Tabs/Historique";
 import Parametres from "./Tabs/Parametres";
 import ParticlesBg from 'particles-bg'
-
+import {IoIosArrowDown} from "react-icons/io"
 
   import { ReactNode } from 'react';
   import {
@@ -65,15 +65,17 @@ function Main(){
           />
           <Flex alignItems={'center'}>
             <Menu>
-              <MenuButton
+           
+             <HStack>
+             <MenuButton
                 as={Button}
                 rounded={'full'}
                 variant={'link'}
                 cursor={'pointer'}
                 minW={0}
                 >
-             <HStack>
              <div className="relative h-fit w-fit">
+           
              <IconButton
             backgroundColor={'#2d62ec'}
             color={'#fff'}
@@ -84,9 +86,11 @@ function Main(){
             onClick={isOpen ? onClose : onOpen}
            
           />   
-          <span className="absolute top-0 right-5 rounded-full h-fit w-fit text-sm bg-[#f00] font-bold text-[#fff]  z-50">27</span>
+       
+          <span className="absolute top-1 right-5 rounded-full h-3 w-3 text-sm bg-[#f00] font-bold text-[#fff]  z-50"></span>
 
           </div>
+          </MenuButton>
           <div className="relative h-fit w-fit z-90">
                 <Avatar
                   size={'sm'}
@@ -98,12 +102,23 @@ function Main(){
                 <span className="absolute top-0 -right-1 rounded-full h-3 w-3 bg-[#0f0] z-50"></span>
                 </div>
               </HStack>
-              </MenuButton>
+              
               <MenuList>
-                <MenuItem>Profile</MenuItem>
-                <MenuItem>Settings</MenuItem>
+                <div className="h-[300px] w-[350px] bg-white rounded overflow-y-scroll mb-3 font-bold">
+                <MenuItem width="100%"><div className="w-full flex items-center justify-between">Stock atteint 29% <span className="relative z-50 rounded-full h-3 w-3 bg-[#fd4e71]"> </span></div></MenuItem>
                 <MenuDivider />
-                <MenuItem>Logout</MenuItem>
+                <MenuItem width="100%"><div className="w-full flex items-center justify-between">Stock atteint 29% <span className="relative z-50 rounded-full h-3 w-3 bg-[#fd4e71]"> </span></div></MenuItem>
+                <MenuDivider /><MenuItem width="100%"><div className="w-full flex items-center justify-between">Bouteille B943/004 atteint 19% <span className="relative z-50 rounded-full h-3 w-3 bg-[#fd4e71]"> </span></div></MenuItem>
+                <MenuDivider /><MenuItem width="100%"><div className="w-full flex items-center justify-between">Stock atteint 29% <span className="relative z-50 rounded-full h-3 w-3 bg-[#fd4e71]"> </span></div></MenuItem>
+                <MenuDivider />
+                <MenuItem width="100%"><div className="w-full flex items-center justify-between">Stock atteint 29% <span className="relative z-50 rounded-full h-3 w-3 bg-[#fd4e71]"> </span></div></MenuItem>
+                <MenuDivider />
+                <MenuItem width="100%"><div className="w-full flex items-center justify-between">Stock atteint 29% <span className="relative z-50 rounded-full h-3 w-3 bg-[#fd4e71]"> </span></div></MenuItem>
+                <MenuDivider />
+                <MenuItem width="100%"><div className="w-full flex items-center justify-between">Stock atteint 29% <span className="relative z-50 rounded-full h-3 w-3 bg-[#fd4e71]"> </span></div></MenuItem>
+                <MenuDivider />
+                </div>
+                <button  onClick={()=>setOpenTab(4)} ><IoIosArrowDown className="animate-bounce"/></button>
               </MenuList>
             </Menu>
 
